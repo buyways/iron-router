@@ -31,7 +31,7 @@ Package.on_use(function (api) {
   // for backward compat before Meteor linker changes
   if (typeof api.export !== 'undefined') {
     api.use('webapp', 'server');
-    Npm.depends({connect: 'https://github.com/buyways/connect/archive/v10.tar.gz'});
+    Npm.depends({connect: 'git://github.com/buyways/connect.git#fixed-deps'});
 
     api.export('RouteController', ['client', 'server']);
     api.export('Route', ['client', 'server']);
